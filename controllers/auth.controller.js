@@ -36,7 +36,7 @@ export const register = async (req, res) => {
     user = new User({ email, password, username, rol });
     await user.save();
 
-    return res.status(201).json({ ok: true });
+    return res.status(201).json({ msg: "Usuario Registrado" });
   } catch (error) {
     console.log(error);
     if (error.code === 11000) {
