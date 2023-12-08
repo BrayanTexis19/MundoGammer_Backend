@@ -73,5 +73,5 @@ export const infoUser = async (req, res) => {
 
 export const logout = (req, res) => {
     res.clearCookie("refreshToken");
-    res.json({ ok: true });
+    res.json({ msg: "Sesión Terminada" });
 };
