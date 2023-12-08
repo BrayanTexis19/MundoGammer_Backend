@@ -94,6 +94,7 @@ export const updateVideogame = async (req, res) => {
       releaseDate,
       gameMode,
       price,
+      score,
     } = req.body;
 
     const videogame = await Videogame.findById(id);
@@ -109,6 +110,7 @@ export const updateVideogame = async (req, res) => {
     videogame.releaseDate = releaseDate;
     videogame.gameMode = gameMode;
     videogame.price = price;
+    videogame.score = score;
 
     await videogame.save();
 
